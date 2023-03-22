@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600;700;800&display=swap');
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --cyanT: hsla(179, 62%, 43%, 0.74);
+    --yellow: hsl(71, 73%, 54%);
+    --gray: hsl(204, 43%, 93%);
+    --blue: hsla(217, 37%, 63%, 0.308);
+
+    /*  - Mobile: 375px
+        - Desktop: 1440px */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Karla', sans-serif;
+    height: 100vh;
+    background-color: var(--blue);
+    font-size: 16px;
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    
+    display: flex;
+    flex-direction: column;
+    
+    width: 620px;
+    height: 470px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 100px 1px var(--blue);
+}
+
+.sectionGroup {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 41px;
+}
+
+.one {margin: 0;}
+.two {
+    background-color: var(--cyan);
+    border-radius: 0 0 0 10px;
+    width: 320px;
+}
+
+.three {
+    background-color: var(--cyanT);
+    border-radius: 0 0 10px 0;
+    width: 320px;
+}
+
+h1 {
+    color: var(--cyan);
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+h3 {
+    color: var(--yellow);
+    font-size: 16px;
+}
+
+.paragraphSecOne {
+    color: rgba(163, 163, 163, 0.74);
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 600;
+    padding-right: 20px;
+}
+
+.price {font-size: 28px; font-weight: 700;}
+span, li {font-size: 14px; font-weight: 300; opacity: 70%;}
+li {list-style: none; padding: 1px 0;}
+
+button {
+    padding: 16px;
+    margin: 10px 0 0 0;
+    color: white;
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 1px 1px 10px 1px rgba(128, 128, 128, 0.596);
+    cursor: pointer;
+}
+
+@media (max-width:375px) {
+    .content {
+        width: 320px;
+        height: 480px;
+        top: -250px;
+    }
+    
+    .sectionGroup {
+        flex-direction: column;
+    }
+
+    .section {
+        padding: 35px;
+    }
+
+    .paragraphSecOne {
+        padding-right: 0px;
+        font-weight: 400;
+    }
+
+    .two {border-radius: 0;}
+    .three {border-radius: 0 0 10px 10px;}
+}
